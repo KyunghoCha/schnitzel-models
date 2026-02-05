@@ -11,12 +11,12 @@ This repository is for training, evaluating, and exporting models used by the `s
 - Class taxonomy and mapping maintenance
 
 **Docs (SSOT)**
-- Pipeline contract: `docs/pipeline_integration.md`
-- Model interface: `docs/model_interface.md`
-- Model I/O samples: `docs/model_io_samples.md`
-- Class taxonomy: `docs/model_class_taxonomy.md`
-- Protocol reference: `docs/protocol.md`
-- ML ops guides: `docs/ai/`
+- Pipeline contract: `docs/contracts/pipeline_integration.md`
+- Model interface: `docs/specs/model_interface.md`
+- Model I/O samples: `docs/specs/model_io_samples.md`
+- Class taxonomy: `docs/specs/model_class_taxonomy.md`
+- Protocol reference: `docs/contracts/protocol.md`
+- ML ops guides: `docs/ops/ai/`
 
 **Repository Layout**
 - `configs/`: training/export configs
@@ -44,12 +44,12 @@ Exports should be compatible with the runtime pipeline:
 - 클래스 분류 체계 및 매핑 유지
 
 **문서(SSOT)**
-- 파이프라인 연동 규약: `docs/pipeline_integration.md`
-- 모델 인터페이스: `docs/model_interface.md`
-- 모델 입출력 샘플: `docs/model_io_samples.md`
-- 클래스 분류 체계: `docs/model_class_taxonomy.md`
-- 프로토콜 레퍼런스: `docs/protocol.md`
-- ML 운영 문서: `docs/ai/`
+- 파이프라인 연동 규약: `docs/contracts/pipeline_integration.md`
+- 모델 인터페이스: `docs/specs/model_interface.md`
+- 모델 입출력 샘플: `docs/specs/model_io_samples.md`
+- 클래스 분류 체계: `docs/specs/model_class_taxonomy.md`
+- 프로토콜 레퍼런스: `docs/contracts/protocol.md`
+- ML 운영 문서: `docs/ops/ai/`
 
 **저장소 구조**
 - `configs/`: 학습/내보내기 설정
