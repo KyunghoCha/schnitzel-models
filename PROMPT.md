@@ -26,6 +26,8 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - Preserve repository conventions; avoid ad-hoc structure or path hardcoding.
 - Prioritize tests by operational risk (export validation, class mapping, runtime compatibility).
 - When adding features, update SSOT first, then implement.
+- Before making changes, re-read the relevant files to confirm current state.
+- If asked for doc/code alignment, follow the established method: read in full, compare to code, update all related docs/configs/tests, and record changes consistently.
 
 **Key docs to read first**
 1. `docs/overview/index.md`
@@ -71,6 +73,8 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - 레포 관례/구조를 유지하고 임의 구조/경로 하드코딩을 지양한다.
 - 테스트는 운영 리스크 중심(Export 검증/클래스 매핑/런타임 호환성)으로 우선순위화한다.
 - 기능 추가 시 SSOT 업데이트를 선행한 뒤 구현한다.
+- 변경 전 관련 파일을 다시 읽어 최신 상태를 확인한다.
+- 문서-코드 정합성 요청 시 기존 방식대로: 문서 정독 → 코드 비교 → 관련 문서/설정/테스트 동시 갱신 → 일관성 기록.
 
 **우선 읽을 문서**
 1. `docs/overview/index.md`
