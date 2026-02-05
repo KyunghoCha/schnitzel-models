@@ -1,0 +1,12 @@
+# IDE
+.idea/
+
+# Local data/artifacts
+/datasets/*
+/experiments/*
+/models/*
+
+# Keep placeholders
+!/datasets/.gitkeep
+!/experiments/.gitkeep
+!/models/.gitkeep
