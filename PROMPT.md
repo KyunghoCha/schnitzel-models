@@ -17,6 +17,16 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/ops/` (data guidelines, train/eval/export, experiment log, ops/ai/)
 - Core docs copied from runtime repo and updated paths
 
+**Working Principles**
+- Apply cross-cutting changes: update code, docs, configs, and tests in the same change-set.
+- Prefer root-cause fixes over tactical patches; avoid accumulating technical debt.
+- Maintain architectural consistency and long-term maintainability (clean boundaries, explicit contracts).
+- Prevent doc/code drift; enforce SSOT alignment.
+- Make assumptions explicit; validate when uncertainty exists.
+- Preserve repository conventions; avoid ad-hoc structure or path hardcoding.
+- Prioritize tests by operational risk (export validation, class mapping, runtime compatibility).
+- When adding features, update SSOT first, then implement.
+
 **Key docs to read first**
 1. `docs/overview/index.md`
 2. `docs/contracts/pipeline_integration.md`
@@ -35,16 +45,6 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
    - ONNX -> `ai.vision.onnx_adapter:ONNXYOLOAdapter`
    - Class map YAML -> `MODEL_CLASS_MAP_PATH`
 
-**Working Principles**
-- Apply cross-cutting changes: update code, docs, configs, and tests in the same change-set.
-- Prefer root-cause fixes over tactical patches; avoid accumulating technical debt.
-- Maintain architectural consistency and long-term maintainability (clean boundaries, explicit contracts).
-- Prevent doc/code drift; enforce SSOT alignment.
-- Make assumptions explicit; validate when uncertainty exists.
-- Preserve repository conventions; avoid ad-hoc structure or path hardcoding.
-- Prioritize tests by operational risk (export validation, class mapping, runtime compatibility).
-- When adding features, update SSOT first, then implement.
-
 ## 한국어
 당신은 `safety-cctv-ai` 런타임 파이프라인용 모델 학습 레포 작업을 이어서 진행합니다.
 
@@ -61,6 +61,16 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/specs/` (model interface, I/O, taxonomy)
   - `docs/ops/` (data/train/experiment/ops 문서)
 - 런타임 레포에서 필요한 문서 복사 및 경로 정리 완료
+
+**작업 원칙**
+- 코드 수정 시 관련 문서/설정/테스트를 동일 체인지셋으로 동시 갱신한다.
+- 단기 패치가 아닌 근본 원인 해결을 우선하여 기술부채 누적을 방지한다.
+- 아키텍처 일관성 및 장기 유지보수성을 보장한다(경계/계약 명확화).
+- 문서-코드 드리프트를 금지하고 SSOT 정합성을 유지한다.
+- 가정은 명시하고 불확실성은 검증한다.
+- 레포 관례/구조를 유지하고 임의 구조/경로 하드코딩을 지양한다.
+- 테스트는 운영 리스크 중심(Export 검증/클래스 매핑/런타임 호환성)으로 우선순위화한다.
+- 기능 추가 시 SSOT 업데이트를 선행한 뒤 구현한다.
 
 **우선 읽을 문서**
 1. `docs/overview/index.md`
@@ -79,13 +89,3 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
    - PT -> `ai.vision.yolo_adapter:YOLOAdapter`
    - ONNX -> `ai.vision.onnx_adapter:ONNXYOLOAdapter`
    - 클래스 매핑 YAML -> `MODEL_CLASS_MAP_PATH`
-
-**작업 원칙**
-- 코드 수정 시 관련 문서/설정/테스트를 동일 체인지셋으로 동시 갱신한다.
-- 단기 패치가 아닌 근본 원인 해결을 우선하여 기술부채 누적을 방지한다.
-- 아키텍처 일관성 및 장기 유지보수성을 보장한다(경계/계약 명확화).
-- 문서-코드 드리프트를 금지하고 SSOT 정합성을 유지한다.
-- 가정은 명시하고 불확실성은 검증한다.
-- 레포 관례/구조를 유지하고 임의 구조/경로 하드코딩을 지양한다.
-- 테스트는 운영 리스크 중심(Export 검증/클래스 매핑/런타임 호환성)으로 우선순위화한다.
-- 기능 추가 시 SSOT 업데이트를 선행한 뒤 구현한다.
