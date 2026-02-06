@@ -4,8 +4,13 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 import shutil
+import sys
 
-from scripts._common import dump_json, get_required, import_ultralytics, load_yaml, set_if_provided
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from _common import dump_json, get_required, import_ultralytics, load_yaml, set_if_provided
 
 
 def main() -> int:

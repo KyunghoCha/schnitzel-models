@@ -39,6 +39,7 @@ Exports should be compatible with the runtime pipeline:
 - `scripts/eval.py` (eval)
 - `scripts/export.py` (export)
 - Requires `ultralytics`, `pyyaml`
+- Default device is `cpu`; use `--device 0` for GPU
 
 **Dataset YAML**
 - Default: `datasets/data.yaml` (YOLO format)
@@ -82,6 +83,7 @@ Exports should be compatible with the runtime pipeline:
 - `scripts/eval.py` (평가)
 - `scripts/export.py` (export)
 - `ultralytics`, `pyyaml` 필요
+- 기본 device는 `cpu`, GPU 사용 시 `--device 0` 지정
 
 **Dataset YAML**
 - Default: `datasets/data.yaml` (YOLO format)

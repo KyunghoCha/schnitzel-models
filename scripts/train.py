@@ -3,8 +3,21 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import sys
 
-from scripts._common import dump_json, get_required, import_ultralytics, load_yaml, set_if_provided
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from _common import (
+    assert_dataset_paths,
+    dump_json,
+    get_required,
+    import_ultralytics,
+    load_yaml,
+    resolve_data_yaml,
+    set_if_provided,
+)
 
 
 def main() -> int:
@@ -36,6 +49,11 @@ def main() -> int:
     set_if_provided(cfg, ["output", "run_name"], args.run_name)
 
     data_yaml = get_required(cfg, ["data", "data_yaml"], "data.data_yaml")
+    data_path = Path(str(data_yaml))
+    if not data_path.exists():
+        raise FileNotFoundError(f"data yaml not found: {data_path}")
+    assert_dataset_paths(data_path)
+    data_resolved = resolve_data_yaml(data_path)
     weights = get_required(cfg, ["model", "weights"], "model.weights")
     img_size = get_required(cfg, ["model", "img_size"], "model.img_size")
     batch = get_required(cfg, ["model", "batch"], "model.batch")
@@ -50,7 +68,7 @@ def main() -> int:
     print("[train] config")
     print(dump_json(cfg))
     model.train(
-        data=str(data_yaml),
+        data=str(data_resolved),
         imgsz=img_size,
         batch=batch,
         epochs=epochs,

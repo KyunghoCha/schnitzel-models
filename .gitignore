@@ -5,6 +5,8 @@
 /datasets/*
 /experiments/*
 /models/*
+/scripts/__pycache__/
+/*.pt
 
 # Keep placeholders
 !/datasets/.gitkeep

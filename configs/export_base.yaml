@@ -6,7 +6,7 @@ model:
   arch: yolo
   weights: ""
   img_size: 640
-  device: auto
+  device: cpu
 
 export:
   format: onnx

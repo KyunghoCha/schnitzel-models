@@ -9,11 +9,13 @@ Prereqs
 -------
 - Python 3.10+
 - `pip install ultralytics pyyaml`
+- Default device is `cpu`; use `--device 0` for GPU
 
 Dataset (YOLO)
 --------------
 - Update `datasets/data.yaml` to point at your local paths.
 - Images/labels should follow YOLO format.
+- Ensure `datasets/images/train` and `datasets/images/val` exist (or adjust paths).
 
 Train
 -----
@@ -59,11 +61,13 @@ Use the runtime repo to validate:
 ---------
 - Python 3.10+
 - `pip install ultralytics pyyaml`
+- 기본 device는 `cpu`, GPU 사용 시 `--device 0` 지정
 
 데이터셋(YOLO)
 -------------
 - `datasets/data.yaml`의 경로를 로컬 환경에 맞게 수정한다.
 - 이미지/라벨은 YOLO 포맷을 따른다.
+- `datasets/images/train`, `datasets/images/val` 경로가 존재해야 한다(필요 시 수정).
 
 학습
 ----
