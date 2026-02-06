@@ -39,6 +39,9 @@ Exports should be compatible with the runtime pipeline:
 - `scripts/export.py` (export)
 - Requires `ultralytics`, `pyyaml`
 
+**Dataset YAML**
+- Default: `datasets/data.yaml` (YOLO format)
+
 ## 한국어
 **개요**
 이 저장소는 `safety-cctv-ai` 파이프라인에서 사용할 모델을 학습/평가/내보내기(export)하기 위한 전용 레포입니다. 모델 학습 의존성과 데이터/실험을 런타임 파이프라인과 분리해 관리합니다.
@@ -77,3 +80,6 @@ Exports should be compatible with the runtime pipeline:
 - `scripts/eval.py` (평가)
 - `scripts/export.py` (export)
 - `ultralytics`, `pyyaml` 필요
+
+**Dataset YAML**
+- Default: `datasets/data.yaml` (YOLO format)

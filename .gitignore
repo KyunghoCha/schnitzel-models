@@ -8,5 +8,6 @@
 
 # Keep placeholders
 !/datasets/.gitkeep
+!/datasets/data.yaml
 !/experiments/.gitkeep
 !/models/.gitkeep

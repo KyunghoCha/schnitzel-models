@@ -1,0 +1,12 @@
+path: datasets
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: PERSON
+  1: FIRE
+  2: SMOKE
+  3: PPE_VIOLATION
+  4: POSTURE_ALERT
+  5: HAZARD_ALERT

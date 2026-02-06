@@ -12,6 +12,7 @@ Define data collection and labeling rules so exported models are compatible with
 - Use real deployment-like scenes (night, rain, backlight, occlusion)
 - Include empty scenes (no event) to reduce false positives
 - Balance classes when possible; record imbalance in experiment logs
+- Dataset YAML is expected at `datasets/data.yaml` (YOLO format)
 
 **Labeling Rules**
 - Bounding boxes should tightly cover the target object
@@ -34,6 +35,7 @@ Define data collection and labeling rules so exported models are compatible with
 - 실환경과 유사한 장면 포함(야간, 비, 역광, 가림)
 - 이벤트 없는 장면 포함(오탐 감소)
 - 클래스 불균형은 실험 로그에 기록
+- 데이터셋 YAML은 `datasets/data.yaml`(YOLO 포맷)을 사용
 
 **라벨링 규칙**
 - 박스는 대상 객체를 타이트하게 감싸기

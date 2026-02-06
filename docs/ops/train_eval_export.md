@@ -17,6 +17,7 @@
 - ONNX export must match runtime adapter input/output expectations
 - Update `MODEL_CLASS_MAP_PATH` when labels change
 - Requires `ultralytics` and `pyyaml`
+- Uses YOLO `datasets/data.yaml` by default
 
 **Example (train)**
 ```bash
@@ -64,6 +65,7 @@ python scripts/export.py \
 - ONNX export는 런타임 어댑터 입출력 규격과 일치해야 함
 - 라벨 변경 시 `MODEL_CLASS_MAP_PATH` 갱신 필요
 - `ultralytics`, `pyyaml` 필요
+- 기본 데이터셋 YAML은 `datasets/data.yaml` 사용
 
 **예시(학습)**
 ```bash
