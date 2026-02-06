@@ -62,7 +62,7 @@ Environment Variables
    - Baseline only. Retune after model/data are fixed.
 8. Tracker (optional): `TRACKER_TYPE=bytetrack` (requires extra deps; falls back to IOU if missing)
 9. Class mapping (optional): `MODEL_CLASS_MAP_PATH=configs/model_class_map.yaml`
-10. PPE model path: `YOLO_PPE_MODEL_PATH=/path/to/ppe_model.pt`
+10. PPE model path: `YOLO_PPE_MODEL_PATH=/path/to/ppe_model.pt` *(file not included)*
 11. PPE model conf: `YOLO_PPE_CONF=0.25`
 12. PPE class mapping: `MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml`
 13. ONNX option: `AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter`
@@ -79,7 +79,7 @@ PPE Demo (Optional)
 ```bash
 AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 PYTHONPATH=src python -m ai.pipeline --source-type file --dry-run --max-events 3 --visualize
 ```
@@ -93,7 +93,7 @@ AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter,ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
 ONNX_MODEL_PATH=models/yolov8n.onnx \
 ONNX_PROVIDERS=CPUExecutionProvider \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 PYTHONPATH=src python -m ai.pipeline --source-type file --dry-run --max-events 3 --visualize
 ```
@@ -184,7 +184,7 @@ PY
    - 기준값만 제공. 실제 모델/데이터 확정 후 재튜닝 필요.
 8. 트래커(선택): `TRACKER_TYPE=bytetrack` (추가 의존성 필요, 없으면 IOU 폴백)
 9. 클래스 매핑(선택): `MODEL_CLASS_MAP_PATH=configs/model_class_map.yaml`
-10. PPE 모델 경로: `YOLO_PPE_MODEL_PATH=/path/to/ppe_model.pt`
+10. PPE 모델 경로: `YOLO_PPE_MODEL_PATH=/path/to/ppe_model.pt` *(파일 미포함)*
 11. PPE 모델 임계값: `YOLO_PPE_CONF=0.25`
 12. PPE 클래스 매핑: `MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml`
 13. ONNX 옵션: `AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter`
@@ -201,7 +201,7 @@ PPE 데모(선택)
 ```bash
 AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 PYTHONPATH=src python -m ai.pipeline --source-type file --dry-run --max-events 3 --visualize
 ```
@@ -214,7 +214,7 @@ AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter,ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
 ONNX_MODEL_PATH=models/yolov8n.onnx \
 ONNX_PROVIDERS=CUDAExecutionProvider,CPUExecutionProvider \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 PYTHONPATH=src python -m ai.pipeline --source-type file --dry-run --max-events 3 --visualize
 ```

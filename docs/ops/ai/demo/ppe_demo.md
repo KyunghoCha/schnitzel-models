@@ -7,7 +7,7 @@ Provide a demo-only PPE integration using a public PPE model. This is for visual
 
 Model
 -----
-- Hansung-Cho PPE YOLOv8 model (demo): `models/yolov8_ppe_hansung.pt`
+- PPE YOLOv8 model (demo): `models/ppe_model.pt` *(not included; replace with your file)*
 - Class map (demo): `configs/demo/model_class_map_ppe.yaml`
 
 Run (PPE only)
@@ -15,7 +15,7 @@ Run (PPE only)
 ```bash
 PYTHONPATH=src AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 python -m ai.pipeline --source-type file --dry-run --max-events 200 --visualize
 ```
@@ -27,7 +27,7 @@ PYTHONPATH=src AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter,ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
 ONNX_MODEL_PATH=models/yolov8n.onnx \
 ONNX_PROVIDERS=CPUExecutionProvider \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 python -m ai.pipeline --source-type file --dry-run --max-events 200 --visualize
 ```
@@ -44,7 +44,7 @@ Notes
 
 모델
 -----
-- Hansung-Cho PPE YOLOv8 (데모): `models/yolov8_ppe_hansung.pt`
+- PPE YOLOv8 모델(데모): `models/ppe_model.pt` *(레포 미포함, 실제 파일로 교체 필요)*
 - 클래스 매핑(데모): `configs/demo/model_class_map_ppe.yaml`
 
 실행(PPE만)
@@ -52,7 +52,7 @@ Notes
 ```bash
 PYTHONPATH=src AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 python -m ai.pipeline --source-type file --dry-run --max-events 200 --visualize
 ```
@@ -64,7 +64,7 @@ PYTHONPATH=src AI_MODEL_MODE=real \
 AI_MODEL_ADAPTER=ai.vision.onnx_adapter:ONNXYOLOAdapter,ai.vision.demo.yolo_ppe_adapter:YOLOPPEAdapter \
 ONNX_MODEL_PATH=models/yolov8n.onnx \
 ONNX_PROVIDERS=CPUExecutionProvider \
-YOLO_PPE_MODEL_PATH=models/yolov8_ppe_hansung.pt \
+YOLO_PPE_MODEL_PATH=models/ppe_model.pt \
 MODEL_CLASS_MAP_PATH_PPE=configs/demo/model_class_map_ppe.yaml \
 python -m ai.pipeline --source-type file --dry-run --max-events 200 --visualize
 ```
