@@ -15,7 +15,7 @@ Dataset (YOLO)
 --------------
 - Update `datasets/data.yaml` to point at your local paths.
 - Images/labels should follow YOLO format.
-- Ensure `datasets/images/train` and `datasets/images/val` exist (or adjust paths).
+- Ensure `datasets/images/train` and `datasets/images/val` exist (create locally; not tracked in repo).
 
 Train
 -----
@@ -67,7 +67,7 @@ Use the runtime repo to validate:
 -------------
 - `datasets/data.yaml`의 경로를 로컬 환경에 맞게 수정한다.
 - 이미지/라벨은 YOLO 포맷을 따른다.
-- `datasets/images/train`, `datasets/images/val` 경로가 존재해야 한다(필요 시 수정).
+- `datasets/images/train`, `datasets/images/val` 경로가 존재해야 한다(로컬에서 생성, 레포에는 포함되지 않음).
 
 학습
 ----

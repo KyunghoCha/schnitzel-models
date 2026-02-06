@@ -19,7 +19,7 @@
 - Requires `ultralytics` and `pyyaml`
 - Default device is `cpu`; use `--device 0` for GPU
 - Uses YOLO `datasets/data.yaml` by default
-- `datasets/images/train` and `datasets/images/val` must exist
+- `datasets/images/train` and `datasets/images/val` must exist (create locally; not tracked in repo)
 
 **Example (train)**
 ```bash
@@ -69,7 +69,7 @@ python scripts/export.py \
 - `ultralytics`, `pyyaml` 필요
 - 기본 device는 `cpu`이며 GPU는 `--device 0` 사용
 - 기본 데이터셋 YAML은 `datasets/data.yaml` 사용
-- `datasets/images/train`, `datasets/images/val` 경로가 필요
+- `datasets/images/train`, `datasets/images/val` 경로가 필요(로컬에서 생성, 레포에는 포함되지 않음)
 
 **예시(학습)**
 ```bash
