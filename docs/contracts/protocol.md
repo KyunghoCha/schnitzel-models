@@ -184,11 +184,11 @@ RTSP example:
 - Mock mode emits `ZONE_INTRUSION` + `object_type=PERSON` with `severity=LOW`.
 - FIRE/SMOKE/PPE/POSTURE/HAZARD types require a model adapter + class map configuration.
 
-Code Mapping
-------------
-- Event payload: `src/ai/events/schema.py`, `src/ai/pipeline/events.py`
-- Zones/rule_point: `src/ai/rules/zones.py`
-- Backend POST: `src/ai/clients/backend_api.py`
+Code Mapping (runtime repo)
+---------------------------
+- Event payload: `safety-cctv-ai/src/ai/events/schema.py`, `safety-cctv-ai/src/ai/pipeline/events.py`
+- Zones/rule_point: `safety-cctv-ai/src/ai/rules/zones.py`
+- Backend POST: `safety-cctv-ai/src/ai/clients/backend_api.py`
 
 ---
 
@@ -375,8 +375,8 @@ RTSP URL 예시:
 - mock 모드는 `ZONE_INTRUSION` + `object_type=PERSON`, `severity=LOW`만 발행한다.
 - FIRE/SMOKE/PPE/POSTURE/HAZARD 타입은 모델 어댑터 + 클래스 매핑 설정이 필요하다.
 
-코드 매핑
----------
-- 이벤트 페이로드: `src/ai/events/schema.py`, `src/ai/pipeline/events.py`
-- Zone/rule_point: `src/ai/rules/zones.py`
-- 백엔드 POST: `src/ai/clients/backend_api.py`
+코드 매핑(런타임 레포)
+---------------------
+- 이벤트 페이로드: `safety-cctv-ai/src/ai/events/schema.py`, `safety-cctv-ai/src/ai/pipeline/events.py`
+- Zone/rule_point: `safety-cctv-ai/src/ai/rules/zones.py`
+- 백엔드 POST: `safety-cctv-ai/src/ai/clients/backend_api.py`

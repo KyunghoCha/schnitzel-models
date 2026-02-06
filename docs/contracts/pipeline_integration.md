@@ -14,14 +14,14 @@ This document defines how exported models from this repo must align with the run
 
 **Class mapping**
 - Provide a YAML mapping (`MODEL_CLASS_MAP_PATH`) for class_id -> event/object/severity
-- Reference: `docs/model_class_taxonomy.md`
+- Reference: `docs/specs/model_class_taxonomy.md`
 
 **Detection payload contract**
 Each detection emitted by a model adapter must include:
 - `event_type`, `object_type`, `severity`
 - `confidence`
 - `bbox` (`x1`, `y1`, `x2`, `y2`)
-- `track_id` is required for PERSON unless tracker is disabled
+- `track_id` is required for PERSON (use a synthetic id if no tracker)
 
 **Training/export checklist**
 - Update taxonomy if new labels are added
@@ -43,14 +43,14 @@ Each detection emitted by a model adapter must include:
 
 **클래스 매핑**
 - YAML 매핑(`MODEL_CLASS_MAP_PATH`)으로 class_id -> event/object/severity 제공
-- 기준 문서: `docs/model_class_taxonomy.md`
+- 기준 문서: `docs/specs/model_class_taxonomy.md`
 
 **Detection 페이로드 계약**
 모델 어댑터가 반환하는 detection은 다음 필드를 포함해야 합니다:
 - `event_type`, `object_type`, `severity`
 - `confidence`
 - `bbox` (`x1`, `y1`, `x2`, `y2`)
-- PERSON의 `track_id`는 트래커 비활성 시 제외 가능
+- PERSON의 `track_id`는 필수이며, 트래커가 없으면 합성 id를 부여
 
 **학습/export 체크리스트**
 - 라벨 추가 시 taxonomy 업데이트

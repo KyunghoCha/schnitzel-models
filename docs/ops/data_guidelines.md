@@ -6,7 +6,7 @@ Define data collection and labeling rules so exported models are compatible with
 
 **Scope**
 - CCTV video frames for detection tasks
-- Labels aligned with `docs/model_class_taxonomy.md`
+- Labels aligned with `docs/specs/model_class_taxonomy.md`
 
 **Data Rules**
 - Use real deployment-like scenes (night, rain, backlight, occlusion)
@@ -28,7 +28,7 @@ Define data collection and labeling rules so exported models are compatible with
 
 **범위**
 - CCTV 영상 프레임 기반 탐지
-- `docs/model_class_taxonomy.md`와 일치하는 라벨
+- `docs/specs/model_class_taxonomy.md`와 일치하는 라벨
 
 **데이터 규칙**
 - 실환경과 유사한 장면 포함(야간, 비, 역광, 가림)

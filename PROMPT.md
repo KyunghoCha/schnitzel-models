@@ -16,6 +16,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/specs/` (model interface, I/O samples, taxonomy)
   - `docs/ops/` (data guidelines, train/eval/export, experiment log, ops/ai/)
 - Core docs copied from runtime repo and updated paths
+ - Runtime repo code-mapping references normalized to `safety-cctv-ai/...`
 
 **Working Principles**
 - Follow `/home/ckh/CapstoneProjects/PROMPTS` as the execution standard and output template SSOT.

@@ -81,8 +81,9 @@ Notes
 - Use `AI_MODEL_ADAPTER` to select adapter implementation at runtime.
 - For multiple models, pass a comma-separated list (e.g., `a:AdapterA,b:AdapterB`).
 - Optional class mapping: set `MODEL_CLASS_MAP_PATH` to a yaml file (draft: `configs/model_class_map.yaml`).
-- A custom adapter template is available at `src/ai/vision/custom_adapter.py`.
-- ONNX baseline adapter: `src/ai/vision/onnx_adapter.py`.
+- A custom adapter template is available in the runtime repo:
+  `safety-cctv-ai/src/ai/vision/custom_adapter.py`.
+- ONNX baseline adapter (runtime repo): `safety-cctv-ai/src/ai/vision/onnx_adapter.py`.
 
 Mock I/O Examples
 -----------------
@@ -125,12 +126,12 @@ Output (multiple detections)
 ]
 ```
 
-Code Mapping
-------------
-- Mock/real builders: `src/ai/pipeline/events.py`
-- Model adapter interface: `src/ai/pipeline/model_adapter.py`
-- Dummy payload schema: `src/ai/events/schema.py`
-- Builder wiring: `src/ai/pipeline/__main__.py`
+Code Mapping (runtime repo)
+---------------------------
+- Mock/real builders: `safety-cctv-ai/src/ai/pipeline/events.py`
+- Model adapter interface: `safety-cctv-ai/src/ai/pipeline/model_adapter.py`
+- Dummy payload schema: `safety-cctv-ai/src/ai/events/schema.py`
+- Builder wiring: `safety-cctv-ai/src/ai/pipeline/__main__.py`
 
 ## 한국어
 목적
@@ -212,8 +213,9 @@ Code Mapping
 - 런타임 어댑터 선택은 `AI_MODEL_ADAPTER`를 사용한다.
 - 복수 모델은 콤마로 구분하여 지정한다(예: `a:AdapterA,b:AdapterB`).
 - 선택 클래스 매핑: `MODEL_CLASS_MAP_PATH`로 yaml을 지정한다(초안: `configs/model_class_map.yaml`).
-- 커스텀 어댑터 템플릿은 `src/ai/vision/custom_adapter.py`에 있다.
-- ONNX 기준 어댑터: `src/ai/vision/onnx_adapter.py`.
+- 커스텀 어댑터 템플릿은 런타임 레포에 있다:
+  `safety-cctv-ai/src/ai/vision/custom_adapter.py`.
+- ONNX 기준 어댑터(런타임 레포): `safety-cctv-ai/src/ai/vision/onnx_adapter.py`.
 
 모크 입출력 예시
 ---------------
@@ -258,7 +260,7 @@ Code Mapping
 
 코드 매핑
 ---------
-- 모크/실제 빌더: `src/ai/pipeline/events.py`
-- 모델 어댑터 인터페이스: `src/ai/pipeline/model_adapter.py`
-- 더미 페이로드 스키마: `src/ai/events/schema.py`
-- 빌더 연결: `src/ai/pipeline/__main__.py`
+- 모크/실제 빌더: `safety-cctv-ai/src/ai/pipeline/events.py`
+- 모델 어댑터 인터페이스: `safety-cctv-ai/src/ai/pipeline/model_adapter.py`
+- 더미 페이로드 스키마: `safety-cctv-ai/src/ai/events/schema.py`
+- 빌더 연결: `safety-cctv-ai/src/ai/pipeline/__main__.py`
