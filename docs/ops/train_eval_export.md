@@ -16,6 +16,32 @@
 **Notes**
 - ONNX export must match runtime adapter input/output expectations
 - Update `MODEL_CLASS_MAP_PATH` when labels change
+- Requires `ultralytics` and `pyyaml`
+
+**Example (train)**
+```bash
+python scripts/train.py \
+  --config configs/train_base.yaml \
+  --weights yolov8n.pt \
+  --data datasets/data.yaml \
+  --epochs 50 --batch 16 --img-size 640
+```
+
+**Example (eval)**
+```bash
+python scripts/eval.py \
+  --config configs/eval_base.yaml \
+  --weights runs/train/weights/best.pt \
+  --data datasets/data.yaml
+```
+
+**Example (export)**
+```bash
+python scripts/export.py \
+  --config configs/export_base.yaml \
+  --weights runs/train/weights/best.pt \
+  --format onnx --opset 12
+```
 
 **Recommended Outputs**
 - `models/` for exported weights (local)
@@ -37,6 +63,32 @@
 **노트**
 - ONNX export는 런타임 어댑터 입출력 규격과 일치해야 함
 - 라벨 변경 시 `MODEL_CLASS_MAP_PATH` 갱신 필요
+- `ultralytics`, `pyyaml` 필요
+
+**예시(학습)**
+```bash
+python scripts/train.py \
+  --config configs/train_base.yaml \
+  --weights yolov8n.pt \
+  --data datasets/data.yaml \
+  --epochs 50 --batch 16 --img-size 640
+```
+
+**예시(평가)**
+```bash
+python scripts/eval.py \
+  --config configs/eval_base.yaml \
+  --weights runs/train/weights/best.pt \
+  --data datasets/data.yaml
+```
+
+**예시(export)**
+```bash
+python scripts/export.py \
+  --config configs/export_base.yaml \
+  --weights runs/train/weights/best.pt \
+  --format onnx --opset 12
+```
 
 **권장 출력 경로**
 - `models/`: export 결과(로컬)

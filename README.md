@@ -33,6 +33,12 @@ Exports should be compatible with the runtime pipeline:
 - PT: used by `ai.vision.yolo_adapter:YOLOAdapter`
 - Class map YAML: `MODEL_CLASS_MAP_PATH`
 
+**Scripts (Ultralytics baseline)**
+- `scripts/train.py` (train)
+- `scripts/eval.py` (eval)
+- `scripts/export.py` (export)
+- Requires `ultralytics`, `pyyaml`
+
 ## 한국어
 **개요**
 이 저장소는 `safety-cctv-ai` 파이프라인에서 사용할 모델을 학습/평가/내보내기(export)하기 위한 전용 레포입니다. 모델 학습 의존성과 데이터/실험을 런타임 파이프라인과 분리해 관리합니다.
@@ -65,3 +71,9 @@ Exports should be compatible with the runtime pipeline:
 - ONNX: `ai.vision.onnx_adapter:ONNXYOLOAdapter`
 - PT: `ai.vision.yolo_adapter:YOLOAdapter`
 - 클래스 매핑 YAML: `MODEL_CLASS_MAP_PATH`
+
+**스크립트 (Ultralytics 기준)**
+- `scripts/train.py` (학습)
+- `scripts/eval.py` (평가)
+- `scripts/export.py` (export)
+- `ultralytics`, `pyyaml` 필요

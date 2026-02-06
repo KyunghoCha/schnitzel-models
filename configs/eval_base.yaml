@@ -3,7 +3,7 @@ app:
   stage: eval
 
 data:
-  val_dir: datasets/val
+  data_yaml: datasets/data.yaml
   class_map: configs/model_class_map.yaml
 
 model:

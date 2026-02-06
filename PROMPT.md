@@ -37,8 +37,9 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 3. `docs/specs/model_interface.md`
 
 **What’s NOT done yet**
-- Training/eval/export scripts (skeleton only; logic pending)
-- Config templates exist (train/eval/export); hyperparams not tuned
+- Training/eval/export logic is minimal (Ultralytics only).
+- Config templates exist (train/eval/export); hyperparams not tuned.
+- Dataset tooling and experiment automation not implemented.
 - Any dataset tooling or experiment logging automation
 
 **Immediate next steps**
