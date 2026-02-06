@@ -17,6 +17,7 @@ This repository is for training, evaluating, and exporting models used by the `s
 - Class taxonomy: `docs/specs/model_class_taxonomy.md`
 - Protocol reference: `docs/contracts/protocol.md`
 - ML ops guides: `docs/ops/ai/`
+- Quickstart: `docs/ops/quickstart.md`
 
 **Repository Layout**
 - `configs/`: training/export configs
@@ -59,6 +60,7 @@ Exports should be compatible with the runtime pipeline:
 - 클래스 분류 체계: `docs/specs/model_class_taxonomy.md`
 - 프로토콜 레퍼런스: `docs/contracts/protocol.md`
 - ML 운영 문서: `docs/ops/ai/`
+- 빠른 시작: `docs/ops/quickstart.md`
 
 **저장소 구조**
 - `configs/`: 학습/내보내기 설정
