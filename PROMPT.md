@@ -18,6 +18,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - Core docs copied from runtime repo and updated paths
 
 **Working Principles**
+- Follow `/home/ckh/CapstoneProjects/PROMPTS` as the execution standard and output template SSOT.
 - Apply cross-cutting changes: update code, docs, configs, and tests in the same change-set.
 - Prefer root-cause fixes over tactical patches; avoid accumulating technical debt.
 - Maintain architectural consistency and long-term maintainability (clean boundaries, explicit contracts).
@@ -65,6 +66,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - 런타임 레포에서 필요한 문서 복사 및 경로 정리 완료
 
 **작업 원칙**
+- 실행 표준/출력 템플릿 SSOT는 `/home/ckh/CapstoneProjects/PROMPTS`를 따른다.
 - 코드 수정 시 관련 문서/설정/테스트를 동일 체인지셋으로 동시 갱신한다.
 - 단기 패치가 아닌 근본 원인 해결을 우선하여 기술부채 누적을 방지한다.
 - 아키텍처 일관성 및 장기 유지보수성을 보장한다(경계/계약 명확화).
