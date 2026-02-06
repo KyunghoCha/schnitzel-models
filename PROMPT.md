@@ -7,7 +7,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - Train/evaluate/export models for the runtime pipeline repo: `safety-cctv-ai`
 - Keep heavy ML dependencies, datasets, and experiments separate from runtime code
 
-**Current status**
+**Current status (2026-02-06)**
 - Repo created and structured with:
   - `configs/`, `datasets/`, `experiments/`, `models/`, `scripts/`, `src/`, `docs/`
 - Docs reorganized into:
@@ -15,8 +15,8 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/contracts/` (pipeline integration + protocol)
   - `docs/specs/` (model interface, I/O samples, taxonomy)
   - `docs/ops/` (data guidelines, train/eval/export, experiment log, ops/ai/)
-- Core docs copied from runtime repo and updated paths
- - Runtime repo code-mapping references normalized to `safety-cctv-ai/...`
+- Core docs copied from runtime repo and updated paths.
+- Runtime repo code-mapping references normalized to `safety-cctv-ai/...`.
 
 **Working Principles**
 - Follow `/home/ckh/CapstoneProjects/PROMPTS` as the execution standard and output template SSOT.
@@ -41,11 +41,11 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - Training/eval/export logic is minimal (Ultralytics only).
 - Config templates exist (train/eval/export); hyperparams not tuned.
 - Dataset tooling and experiment automation not implemented.
-- Any dataset tooling or experiment logging automation
+- Experiment logging automation not implemented.
 
 **Immediate next steps**
-1. Draft minimal training/eval/export script skeletons in `scripts/`
-2. Add base config templates in `configs/`
+1. Expand training/eval/export scripts with dataset path validation and output artifacts logging.
+2. Tighten config templates (train/eval/export) with explicit defaults and comments.
 3. Ensure outputs align with runtime adapters:
    - PT -> `ai.vision.yolo_adapter:YOLOAdapter`
    - ONNX -> `ai.vision.onnx_adapter:ONNXYOLOAdapter`
@@ -58,7 +58,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - 런타임 레포(`safety-cctv-ai`)에서 사용할 모델을 학습/평가/export
 - 데이터/실험/의존성은 런타임 레포와 분리 관리
 
-**현재 상태**
+**현재 상태 (2026-02-06)**
 - 기본 구조 생성 완료:
   - `configs/`, `datasets/`, `experiments/`, `models/`, `scripts/`, `src/`, `docs/`
 - 문서 구조 정리 완료:
@@ -66,7 +66,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/contracts/` (연동 규약 + protocol)
   - `docs/specs/` (model interface, I/O, taxonomy)
   - `docs/ops/` (data/train/experiment/ops 문서)
-- 런타임 레포에서 필요한 문서 복사 및 경로 정리 완료
+-- 런타임 레포에서 필요한 문서 복사 및 경로 정리 완료
 
 **작업 원칙**
 - 실행 표준/출력 템플릿 SSOT는 `/home/ckh/CapstoneProjects/PROMPTS`를 따른다.
@@ -88,13 +88,14 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 3. `docs/specs/model_interface.md`
 
 **아직 안 한 것**
-- 학습/평가/export 스크립트 작성
-- 학습/export 기본 설정 템플릿
-- 데이터셋/실험 자동화
+- 학습/평가/export 로직은 최소 수준(Ultralytics)만 존재.
+- 학습/평가/export 기본 설정 템플릿은 있으나 하이퍼파라미터 미튜닝.
+- 데이터셋/실험 자동화 미구현.
+- 실험 로그 자동화 미구현.
 
 **다음 단계**
-1. `scripts/`에 train/eval/export 기본 골격 추가
-2. `configs/`에 베이스 설정 템플릿 추가
+1. `scripts/`에 dataset 경로 검증 및 산출물 로그를 포함.
+2. `configs/`에 train/eval/export 기본값 주석/정책 추가.
 3. 런타임 어댑터 호환성 유지
    - PT -> `ai.vision.yolo_adapter:YOLOAdapter`
    - ONNX -> `ai.vision.onnx_adapter:ONNXYOLOAdapter`
