@@ -1,0 +1,17 @@
+app:
+  name: safety-cctv-ai-model
+  stage: eval
+
+data:
+  val_dir: datasets/val
+  class_map: configs/model_class_map.yaml
+
+model:
+  arch: yolo
+  weights: ""
+  img_size: 640
+  device: auto
+
+output:
+  exp_dir: experiments
+  run_name: "eval_baseline"

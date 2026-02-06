@@ -1,0 +1,18 @@
+app:
+  name: safety-cctv-ai-model
+  stage: export
+
+model:
+  arch: yolo
+  weights: ""
+  img_size: 640
+  device: auto
+
+export:
+  format: onnx
+  opset: 12
+  dynamic: true
+
+output:
+  out_dir: models
+  out_name: "model_export"
