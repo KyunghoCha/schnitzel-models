@@ -30,6 +30,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - When adding features, update SSOT first, then implement.
 - Before making changes, re-read the relevant files to confirm current state.
 - If asked for doc/code alignment, follow the established method: read in full, compare to code, update all related docs/configs/tests, and record changes consistently.
+- If any contract/interface changes occur, update the runtime repo `docs/contracts/protocol.md` and `docs/contracts/team_decisions.md`, and sync this repo’s integration docs.
 
 **Key docs to read first**
 1. `docs/overview/index.md`
@@ -79,6 +80,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
 - 기능 추가 시 SSOT 업데이트를 선행한 뒤 구현한다.
 - 변경 전 관련 파일을 다시 읽어 최신 상태를 확인한다.
 - 문서-코드 정합성 요청 시 기존 방식대로: 문서 정독 → 코드 비교 → 관련 문서/설정/테스트 동시 갱신 → 일관성 기록.
+- 계약/인터페이스 변경 시 런타임 레포의 `docs/contracts/protocol.md` 및 `docs/contracts/team_decisions.md`를 갱신하고, 이 레포 문서를 동기화한다.
 
 **우선 읽을 문서**
 1. `docs/overview/index.md`
