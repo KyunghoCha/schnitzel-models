@@ -1,131 +1,136 @@
-# Model I/O Samples
+# Model I/O Samples v0.2
 
 ## English
-Purpose
--------
-Provide stable input/output samples for adapter implementation and tests.
 
-Input (frame metadata only)
----------------------------
-```json
+## Purpose
+
+Provides concrete JSON examples for different detection scenarios. These samples should be used for testing adapters and validating backend integration.
+
+## 1. Person Zone Intrusion
+
+Detected a person inside a restricted zone.
+
+```jsonc
 {
-  "frame_idx": 12,
+  "event_id": "8a1b2c3d-...",
+  "ts": "2026-02-01T10:00:00+09:00",
+  "site_id": "S001",
   "camera_id": "cam01",
-  "ts": "2026-02-05T14:00:01+09:00",
-  "shape": [1080, 1920, 3]
-}
-```
-
-Detection Output (single)
--------------------------
-```json
-{
   "event_type": "ZONE_INTRUSION",
   "object_type": "PERSON",
-  "severity": "LOW",
-  "track_id": 12,
-  "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-  "confidence": 0.75
+  "severity": "HIGH",
+  "track_id": 42,
+  "bbox": {"x1": 100, "y1": 200, "x2": 150, "y2": 350},
+  "confidence": 0.95,
+  "zone": {"zone_id": "dangerous-area", "inside": true}
 }
 ```
 
-Detection Output (multi)
-------------------------
-```json
-[
-  {
-    "event_type": "ZONE_INTRUSION",
-    "object_type": "PERSON",
-    "severity": "LOW",
-    "track_id": 12,
-    "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-    "confidence": 0.75
-  },
-  {
-    "event_type": "PPE_VIOLATION",
-    "object_type": "PERSON",
-    "severity": "MEDIUM",
-    "track_id": 12,
-    "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-    "confidence": 0.70
-  },
-  {
-    "event_type": "FIRE_DETECTED",
-    "object_type": "FIRE",
-    "severity": "HIGH",
-    "track_id": null,
-    "bbox": { "x1": 220, "y1": 40, "x2": 360, "y2": 300 },
-    "confidence": 0.71
-  }
-]
+## 2. Fire Detection
+
+Fire detected in the frame. Usually does not require `track_id` but requires `object_type=FIRE`.
+
+```jsonc
+{
+  "event_id": "9b2c3d4e-...",
+  "ts": "2026-02-01T10:05:00+09:00",
+  "site_id": "S001",
+  "camera_id": "cam02",
+  "event_type": "FIRE_DETECTED",
+  "object_type": "FIRE",
+  "severity": "CRITICAL",
+  "bbox": {"x1": 500, "y1": 400, "x2": 600, "y2": 500},
+  "confidence": 0.82,
+  "zone": {"zone_id": "factory-floor", "inside": true}
+}
 ```
 
-Notes
------
-1. `event_type`/`object_type` must follow `docs/contracts/protocol.md`.
-2. `bbox` is pixel coordinates in frame space.
+## 3. PPE Violation
+
+A person is detected without a helmet in a mandatory PPE zone.
+
+```jsonc
+{
+  "event_id": "af1f2e3d-...",
+  "ts": "2026-02-01T10:10:00+09:00",
+  "site_id": "S001",
+  "camera_id": "cam01",
+  "event_type": "PPE_VIOLATION",
+  "object_type": "NO_HELMET",
+  "severity": "MEDIUM",
+  "track_id": 43,
+  "bbox": {"x1": 200, "y1": 100, "x2": 250, "y2": 150},
+  "confidence": 0.75,
+  "zone": {"zone_id": "ppe-required-zone", "inside": true}
+}
+```
+
+---
 
 ## 한국어
-목적
------
-어댑터 구현과 테스트에 사용할 입력/출력 샘플을 제공한다.
 
-입력(프레임 메타데이터)
------------------------
-```json
+모델 I/O 샘플 v0.2
+================
+
+## 목적
+
+다양한 탐지 시나리오에 대한 실제 JSON 예시를 제공함. 이 샘플들은 어댑터 테스트 및 백엔드 연동 검증용으로 사용됨.
+
+## 1. 사람 구역 침입
+
+제한 구역 내에서 사람이 감지된 경우.
+
+```jsonc
 {
-  "frame_idx": 12,
+  "event_id": "8a1b2c3d-...",
+  "ts": "2026-02-01T10:00:00+09:00",
+  "site_id": "S001",
   "camera_id": "cam01",
-  "ts": "2026-02-05T14:00:01+09:00",
-  "shape": [1080, 1920, 3]
-}
-```
-
-Detection 출력(단일)
--------------------
-```json
-{
   "event_type": "ZONE_INTRUSION",
   "object_type": "PERSON",
-  "severity": "LOW",
-  "track_id": 12,
-  "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-  "confidence": 0.75
+  "severity": "HIGH",
+  "track_id": 42,
+  "bbox": {"x1": 100, "y1": 200, "x2": 150, "y2": 350},
+  "confidence": 0.95,
+  "zone": {"zone_id": "dangerous-area", "inside": true}
 }
 ```
 
-Detection 출력(복수)
--------------------
-```json
-[
-  {
-    "event_type": "ZONE_INTRUSION",
-    "object_type": "PERSON",
-    "severity": "LOW",
-    "track_id": 12,
-    "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-    "confidence": 0.75
-  },
-  {
-    "event_type": "PPE_VIOLATION",
-    "object_type": "PERSON",
-    "severity": "MEDIUM",
-    "track_id": 12,
-    "bbox": { "x1": 10, "y1": 20, "x2": 200, "y2": 260 },
-    "confidence": 0.70
-  },
-  {
-    "event_type": "FIRE_DETECTED",
-    "object_type": "FIRE",
-    "severity": "HIGH",
-    "track_id": null,
-    "bbox": { "x1": 220, "y1": 40, "x2": 360, "y2": 300 },
-    "confidence": 0.71
-  }
-]
+## 2. 화재 탐지
+
+화면 내에서 화재가 감지된 경우. 일반적으로 `track_id`는 필수적이지 않으나 `object_type=FIRE`가 필요함.
+
+```jsonc
+{
+  "event_id": "9b2c3d4e-...",
+  "ts": "2026-02-01T10:05:00+09:00",
+  "site_id": "S001",
+  "camera_id": "cam02",
+  "event_type": "FIRE_DETECTED",
+  "object_type": "FIRE",
+  "severity": "CRITICAL",
+  "bbox": {"x1": 500, "y1": 400, "x2": 600, "y2": 500},
+  "confidence": 0.82,
+  "zone": {"zone_id": "factory-floor", "inside": true}
+}
 ```
 
-노트
------
-1. `event_type`/`object_type`는 `docs/contracts/protocol.md`를 따른다.
-2. `bbox`는 프레임 픽셀 좌표 기준이다.
+## 3. PPE 미착용 (안전모)
+
+안전모 착용 필수 구역에서 안전모를 쓰지 않은 사람이 감지된 경우.
+
+```jsonc
+{
+  "event_id": "af1f2e3d-...",
+  "ts": "2026-02-01T10:10:00+09:00",
+  "site_id": "S001",
+  "camera_id": "cam01",
+  "event_type": "PPE_VIOLATION",
+  "object_type": "NO_HELMET",
+  "severity": "MEDIUM",
+  "track_id": 43,
+  "bbox": {"x1": 200, "y1": 100, "x2": 250, "y2": 150},
+  "confidence": 0.75,
+  "zone": {"zone_id": "ppe-required-zone", "inside": true}
+}
+```
