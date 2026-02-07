@@ -65,7 +65,7 @@ flowchart LR
 
 ```bash
 # 1. Clone
-git clone <repo-url>
+git clone https://github.com/Capstone-Bug24/safety-cctv-ai-model.git
 cd be-ai-endpoint-model
 
 # 2. Windows Setup (Recommended)
