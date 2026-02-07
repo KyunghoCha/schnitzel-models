@@ -1,7 +1,7 @@
 # Pipeline Integration Contract
 
 ## English
-This document defines how exported models from this repo must align with the runtime pipeline repo (`safety-cctv-ai`).
+This document defines how exported models from this repo must align with the runtime pipeline repo (`be-ai-endpoint`).
 
 **Adapters in runtime**
 - YOLO PT: `ai.vision.yolo_adapter:YOLOAdapter`
@@ -30,7 +30,7 @@ Each detection emitted by a model adapter must include:
 - Validate with sample video using runtime pipeline
 
 ## 한국어
-이 문서는 본 레포에서 export한 모델이 런타임 파이프라인(`safety-cctv-ai`)과 호환되기 위한 규약을 정의합니다.
+이 문서는 본 레포에서 export한 모델이 런타임 파이프라인(`be-ai-endpoint`)과 호환되기 위한 규약을 정의합니다.
 
 **런타임 어댑터**
 - YOLO PT: `ai.vision.yolo_adapter:YOLOAdapter`

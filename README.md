@@ -1,8 +1,8 @@
-# safety-cctv-ai-model
+# be-ai-endpoint-model
 
 ## English
 **Overview**
-This repository is for training, evaluating, and exporting models used by the `safety-cctv-ai` pipeline. It is intentionally separated from the runtime pipeline repo to keep heavy ML dependencies, datasets, and experiments isolated.
+This repository is for training, evaluating, and exporting models used by the `be-ai-endpoint` pipeline. It is intentionally separated from the runtime pipeline repo to keep heavy ML dependencies, datasets, and experiments isolated.
 
 **Scope**
 - Data preparation and labeling workflow
@@ -46,7 +46,7 @@ Exports should be compatible with the runtime pipeline:
 
 ## 한국어
 **개요**
-이 저장소는 `safety-cctv-ai` 파이프라인에서 사용할 모델을 학습/평가/내보내기(export)하기 위한 전용 레포입니다. 모델 학습 의존성과 데이터/실험을 런타임 파이프라인과 분리해 관리합니다.
+이 저장소는 `be-ai-endpoint` 파이프라인에서 사용할 모델을 학습/평가/내보내기(export)하기 위한 전용 레포입니다. 모델 학습 의존성과 데이터/실험을 런타임 파이프라인과 분리해 관리합니다.
 
 **범위**
 - 데이터 준비 및 라벨링 워크플로우

@@ -186,9 +186,9 @@ RTSP example:
 
 Code Mapping (runtime repo)
 ---------------------------
-- Event payload: `safety-cctv-ai/src/ai/events/schema.py`, `safety-cctv-ai/src/ai/pipeline/events.py`
-- Zones/rule_point: `safety-cctv-ai/src/ai/rules/zones.py`
-- Backend POST: `safety-cctv-ai/src/ai/clients/backend_api.py`
+- Event payload: `be-ai-endpoint/src/ai/events/schema.py`, `be-ai-endpoint/src/ai/pipeline/events.py`
+- Zones/rule_point: `be-ai-endpoint/src/ai/rules/zones.py`
+- Backend POST: `be-ai-endpoint/src/ai/clients/backend_api.py`
 
 ---
 
@@ -377,6 +377,6 @@ RTSP URL 예시:
 
 코드 매핑(런타임 레포)
 ---------------------
-- 이벤트 페이로드: `safety-cctv-ai/src/ai/events/schema.py`, `safety-cctv-ai/src/ai/pipeline/events.py`
-- Zone/rule_point: `safety-cctv-ai/src/ai/rules/zones.py`
-- 백엔드 POST: `safety-cctv-ai/src/ai/clients/backend_api.py`
+- 이벤트 페이로드: `be-ai-endpoint/src/ai/events/schema.py`, `be-ai-endpoint/src/ai/pipeline/events.py`
+- Zone/rule_point: `be-ai-endpoint/src/ai/rules/zones.py`
+- 백엔드 POST: `be-ai-endpoint/src/ai/clients/backend_api.py`

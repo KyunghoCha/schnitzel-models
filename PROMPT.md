@@ -1,10 +1,10 @@
-# Handoff Prompt (safety-cctv-ai-model)
+# Handoff Prompt (be-ai-endpoint-model)
 
 ## English
-You are continuing work on the model-training repo for `safety-cctv-ai`.
+You are continuing work on the model-training repo for `be-ai-endpoint`.
 
 **Repo purpose**
-- Train/evaluate/export models for the runtime pipeline repo: `safety-cctv-ai`
+- Train/evaluate/export models for the runtime pipeline repo: `be-ai-endpoint`
 - Keep heavy ML dependencies, datasets, and experiments separate from runtime code
 
 **Current status (2026-02-06)**
@@ -16,7 +16,7 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
   - `docs/specs/` (model interface, I/O samples, taxonomy)
   - `docs/ops/` (data guidelines, train/eval/export, experiment log, ops/ai/)
 - Core docs copied from runtime repo and updated paths.
-- Runtime repo code-mapping references normalized to `safety-cctv-ai/...`.
+- Runtime repo code-mapping references normalized to `be-ai-endpoint/...`.
 
 **Working Principles**
 - Follow `/home/ckh/CapstoneProjects/PROMPTS` as the execution standard and output template SSOT.
@@ -52,10 +52,10 @@ You are continuing work on the model-training repo for `safety-cctv-ai`.
    - Class map YAML -> `MODEL_CLASS_MAP_PATH`
 
 ## 한국어
-당신은 `safety-cctv-ai` 런타임 파이프라인용 모델 학습 레포 작업을 이어서 진행합니다.
+당신은 `be-ai-endpoint` 런타임 파이프라인용 모델 학습 레포 작업을 이어서 진행합니다.
 
 **레포 목적**
-- 런타임 레포(`safety-cctv-ai`)에서 사용할 모델을 학습/평가/export
+- 런타임 레포(`be-ai-endpoint`)에서 사용할 모델을 학습/평가/export
 - 데이터/실험/의존성은 런타임 레포와 분리 관리
 
 **현재 상태 (2026-02-06)**
