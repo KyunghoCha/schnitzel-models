@@ -1,5 +1,5 @@
 app:
-  name: safety-cctv-ai-model
+  name: schnitzel-models
   stage: eval
 
 data:

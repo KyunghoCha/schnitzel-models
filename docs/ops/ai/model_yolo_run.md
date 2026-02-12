@@ -10,7 +10,7 @@ Scope
 -----
 1. Pretrained YOLO only (no custom training in this phase).
 2. Model adapter implements `ModelAdapter` in the runtime repo:
-   `be-ai-endpoint/src/ai/pipeline/model_adapter.py`.
+   `schnitzel-stream-platform/src/ai/pipeline/model_adapter.py`.
 3. Output must conform to `docs/specs/model_interface.md` and `docs/contracts/protocol.md`.
 
 Constraints
@@ -21,7 +21,7 @@ Constraints
 
 Recommended Adapter Layout
 --------------------------
-1. Create `be-ai-endpoint/src/ai/vision/yolo_adapter.py` in the runtime repo.
+1. Create `schnitzel-stream-platform/src/ai/vision/yolo_adapter.py` in the runtime repo.
 2. Implement `ModelAdapter.infer(frame)` and return detection dict(s).
 3. Keep model-specific preprocessing inside the adapter, not in pipeline core.
 
@@ -130,7 +130,7 @@ Dependencies (optional)
 범위
 ----
 1. 사전학습 YOLO만 사용(커스텀 학습은 후속 단계).
-2. 모델 어댑터는 런타임 레포의 `be-ai-endpoint/src/ai/pipeline/model_adapter.py`의
+2. 모델 어댑터는 런타임 레포의 `schnitzel-stream-platform/src/ai/pipeline/model_adapter.py`의
    `ModelAdapter`를 구현.
 3. 출력은 `docs/specs/model_interface.md`와 `docs/contracts/protocol.md`를 준수.
 
@@ -143,7 +143,7 @@ Dependencies (optional)
 
 권장 어댑터 구성
 ---------------
-1. 런타임 레포에 `be-ai-endpoint/src/ai/vision/yolo_adapter.py` 생성.
+1. 런타임 레포에 `schnitzel-stream-platform/src/ai/vision/yolo_adapter.py` 생성.
 2. `ModelAdapter.infer(frame)` 구현 후 detection dict 리스트 반환.
 3. 전처리/후처리는 파이프라인이 아닌 어댑터에 둔다.
 

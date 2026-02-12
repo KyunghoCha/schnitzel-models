@@ -1,7 +1,7 @@
 # setup_env.ps1
 # Windows PowerShell 개발 환경 설정 스크립트 (Model Training)
 
-Write-Host "Setting up environment for be-ai-endpoint-model..." -ForegroundColor Cyan
+Write-Host "Setting up environment for schnitzel-models..." -ForegroundColor Cyan
 
 # 1. PYTHONPATH 설정 (src 디렉토리 포함)
 $currentDir = Get-Location

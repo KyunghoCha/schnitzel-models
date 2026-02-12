@@ -1,4 +1,4 @@
-# be-ai-endpoint-model
+# schnitzel-models
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
 ![Framework](https://img.shields.io/badge/Framework-Ultralytics-orange)
@@ -13,7 +13,7 @@
 
 ### English
 
-This repository is dedicated to the training, evaluation, and exporting of models for the `be-ai-endpoint` runtime pipeline. It isolates heavy ML dependencies, large datasets, and experimental logs from the production runtime code.
+This repository is dedicated to the training, evaluation, and exporting of models for the `schnitzel-stream-platform` runtime pipeline. It isolates heavy ML dependencies, large datasets, and experimental logs from the production runtime code.
 
 **Key Scope:**
 
@@ -24,7 +24,7 @@ This repository is dedicated to the training, evaluation, and exporting of model
 
 ### 한국어
 
-이 저장소는 `be-ai-endpoint` 런타임 파이프라인에서 사용할 AI 모델의 학습, 평가 및 내보내기(Export)를 전담합니다. 무거운 ML 의존성, 대규모 데이터셋, 실험 로그를 운영 환경과 분리하여 관리합니다.
+이 저장소는 `schnitzel-stream-platform` 런타임 파이프라인에서 사용할 AI 모델의 학습, 평가 및 내보내기(Export)를 전담합니다. 무거운 ML 의존성, 대규모 데이터셋, 실험 로그를 운영 환경과 분리하여 관리합니다.
 
 **주요 기능:**
 
@@ -53,7 +53,7 @@ flowchart LR
     subgraph Export ["📤 Export & Integration"]
         E --> F[Weight Export]
         F --> G[ONNX/PT Runtime Artifacts]
-        G --> H["🌐 be-ai-endpoint (Runtime)"]
+        G --> H["🌐 schnitzel-stream-platform (Runtime)"]
     end
 ```
 
@@ -65,8 +65,8 @@ flowchart LR
 
 ```bash
 # 1. Clone
-git clone https://github.com/Capstone-Bug24/safety-cctv-ai-model.git
-cd be-ai-endpoint-model
+git clone https://github.com/KyunghoCha/schnitzel-models.git
+cd schnitzel-models
 
 # 2. Windows Setup (Recommended)
 ./setup_env.ps1
@@ -122,7 +122,7 @@ python scripts/export.py --weights models/model_export.pt --format onnx
 ---
 
 <p align="center">
-  Made with ❤️ by <b>Team Bug-24</b>
+  Made with ❤️ by <b>Kyungho Cha</b>
   <br>
   Copyright (c) 2026. All rights reserved.
 </p>

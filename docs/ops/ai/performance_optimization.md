@@ -47,7 +47,7 @@ Status
 Related Docs
 ------------
 - Model integration: `docs/specs/model_interface.md`
-- Runtime runbook (external): `be-ai-endpoint/docs/ops/ops_runbook.md`
+- Runtime runbook (external): `schnitzel-stream-platform/docs/ops/ops_runbook.md`
 
 ## 한국어
 목적
@@ -96,4 +96,4 @@ Phase 2: 모델 최적화 (모델 확정 후)
 관련 문서
 ---------
 - 모델 연동: `docs/specs/model_interface.md`
-- 런타임 운영 런북(외부): `be-ai-endpoint/docs/ops/ops_runbook.md`
+- 런타임 운영 런북(외부): `schnitzel-stream-platform/docs/ops/ops_runbook.md`

@@ -1,10 +1,10 @@
-# Handoff Prompt (be-ai-endpoint-model)
+# Handoff Prompt (schnitzel-models)
 
 ## English
-You are continuing work on the model-training repo for `be-ai-endpoint`.
+You are continuing work on the model-training repo for `schnitzel-stream-platform`.
 
 **Repo purpose**
-- Train/evaluate/export models for the runtime pipeline repo: `be-ai-endpoint`
+- Train/evaluate/export models for the runtime pipeline repo: `schnitzel-stream-platform`
 - Keep heavy ML dependencies, datasets, and experiments separate from runtime code
 
 **Current status (2026-02-06)**
@@ -16,10 +16,10 @@ You are continuing work on the model-training repo for `be-ai-endpoint`.
   - `docs/specs/` (model interface, I/O samples, taxonomy)
   - `docs/ops/` (data guidelines, train/eval/export, experiment log, ops/ai/)
 - Core docs copied from runtime repo and updated paths.
-- Runtime repo code-mapping references normalized to `be-ai-endpoint/...`.
+- Runtime repo code-mapping references normalized to `schnitzel-stream-platform/...`.
 
 **Working Principles**
-- Follow `/home/ckh/CapstoneProjects/PROMPTS` as the execution standard and output template SSOT.
+- Follow `/home/ckh/Projects/PROMPTS` as the execution standard and output template SSOT.
 - Apply cross-cutting changes: update code, docs, configs, and tests in the same change-set.
 - Prefer root-cause fixes over tactical patches; avoid accumulating technical debt.
 - Maintain architectural consistency and long-term maintainability (clean boundaries, explicit contracts).
@@ -30,7 +30,7 @@ You are continuing work on the model-training repo for `be-ai-endpoint`.
 - When adding features, update SSOT first, then implement.
 - Before making changes, re-read the relevant files to confirm current state.
 - If asked for doc/code alignment, follow the established method: read in full, compare to code, update all related docs/configs/tests, and record changes consistently.
-- If any contract/interface changes occur, update the runtime repo `docs/contracts/protocol.md` and `docs/contracts/team_decisions.md`, and sync this repo’s integration docs.
+- If any contract/interface changes occur, update the runtime repo `docs/contracts/protocol.md` and sync this repo’s integration docs.
 
 **Key docs to read first**
 1. `docs/overview/index.md`
@@ -52,10 +52,10 @@ You are continuing work on the model-training repo for `be-ai-endpoint`.
    - Class map YAML -> `MODEL_CLASS_MAP_PATH`
 
 ## 한국어
-당신은 `be-ai-endpoint` 런타임 파이프라인용 모델 학습 레포 작업을 이어서 진행합니다.
+당신은 `schnitzel-stream-platform` 런타임 파이프라인용 모델 학습 레포 작업을 이어서 진행합니다.
 
 **레포 목적**
-- 런타임 레포(`be-ai-endpoint`)에서 사용할 모델을 학습/평가/export
+- 런타임 레포(`schnitzel-stream-platform`)에서 사용할 모델을 학습/평가/export
 - 데이터/실험/의존성은 런타임 레포와 분리 관리
 
 **현재 상태 (2026-02-06)**
@@ -69,7 +69,7 @@ You are continuing work on the model-training repo for `be-ai-endpoint`.
 -- 런타임 레포에서 필요한 문서 복사 및 경로 정리 완료
 
 **작업 원칙**
-- 실행 표준/출력 템플릿 SSOT는 `/home/ckh/CapstoneProjects/PROMPTS`를 따른다.
+- 실행 표준/출력 템플릿 SSOT는 `/home/ckh/Projects/PROMPTS`를 따른다.
 - 코드 수정 시 관련 문서/설정/테스트를 동일 체인지셋으로 동시 갱신한다.
 - 단기 패치가 아닌 근본 원인 해결을 우선하여 기술부채 누적을 방지한다.
 - 아키텍처 일관성 및 장기 유지보수성을 보장한다(경계/계약 명확화).
@@ -80,7 +80,7 @@ You are continuing work on the model-training repo for `be-ai-endpoint`.
 - 기능 추가 시 SSOT 업데이트를 선행한 뒤 구현한다.
 - 변경 전 관련 파일을 다시 읽어 최신 상태를 확인한다.
 - 문서-코드 정합성 요청 시 기존 방식대로: 문서 정독 → 코드 비교 → 관련 문서/설정/테스트 동시 갱신 → 일관성 기록.
-- 계약/인터페이스 변경 시 런타임 레포의 `docs/contracts/protocol.md` 및 `docs/contracts/team_decisions.md`를 갱신하고, 이 레포 문서를 동기화한다.
+- 계약/인터페이스 변경 시 런타임 레포의 `docs/contracts/protocol.md`를 갱신하고, 이 레포 문서를 동기화한다.
 
 **우선 읽을 문서**
 1. `docs/overview/index.md`
